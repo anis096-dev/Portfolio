@@ -59,6 +59,41 @@
             <x-input-error for="name" class="mt-2" />
         </div>
 
+        <!-- Date of Birth -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="date_of_birth" value="{{ __('Date of Birth') }}" />
+            <x-input id="date_of_birth" type="text" class="mt-1 block w-full" wire:model.defer="state.date_of_birth" required autocomplete="date_of_birth" />
+            <x-input-error for="date_of_birth" class="mt-2" />
+        </div>
+
+        <!-- Location -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="location" value="{{ __('Location') }}" />
+            <x-input id="location" type="text" class="mt-1 block w-full" wire:model.defer="state.location" required autocomplete="location" />
+            <x-input-error for="location" class="mt-2" />
+        </div>
+
+        <!-- Phone -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="phone" value="{{ __('Phone') }}" />
+            <x-input id="phone" type="text" class="mt-1 block w-full" wire:model.defer="state.phone" required autocomplete="phone" />
+            <x-input-error for="phone" class="mt-2" />
+        </div>
+
+         <!-- Occupation -->
+         <div class="col-span-6 sm:col-span-4">
+            <x-label for="occupation" value="{{ __('Occupation') }}" />
+            <x-input id="occupation" type="text" class="mt-1 block w-full" wire:model.defer="state.occupation" required autocomplete="occupation" />
+            <x-input-error for="occupation" class="mt-2" />
+        </div>
+
+        <!-- bio -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="bio" value="{{ __('Bio') }}" />
+            <textarea id="bio" wire:model.defer="state.bio" class="lg:h-40 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" type="text" name="bio"></textarea>
+            <x-input-error for="bio" class="mt-2" />
+        </div>
+
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="email" value="{{ __('Email') }}" />
