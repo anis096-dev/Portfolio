@@ -20,6 +20,11 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('bio')->nullable();
             $table->string('occupation')->nullable();
+            $table->string('medium')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('dribble')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('CV_drive')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

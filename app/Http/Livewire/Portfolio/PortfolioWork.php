@@ -2,19 +2,32 @@
 
 namespace App\Http\Livewire\Portfolio;
 
-use App\Models\User;
 use Livewire\Component;
 use App\Models\Knowledge;
+use App\Models\Work;
+use Livewire\WithPagination;
 
 class PortfolioWork extends Component
 {
-    public $user, $knowledges;
+    use WithPagination;
+    
+    public $modalFormVisible;
+    /**
+     * Put your custom public properties here!
+     */
 
-    public function mount(){
-        $this->user = User::where('id', 1)
-        ->with(['works'])
-        ->first();
-       
+    public $knowledges;
+    public $perPage = 6;
+    public $selectedCategory = null;
+
+    /**
+     * mount
+     *
+     * @param  mixed $id
+     * @return void
+     */
+    public function mount()
+    {
         $this->knowledges = Knowledge::all();
     }
 
@@ -23,9 +36,23 @@ class PortfolioWork extends Component
             $this->emit('showItemModel', $itemId);
         }
     }
-    
-    public function render()
+
+    /**
+     * The searchclear function.
+     *
+     * @return void
+     */
+    public function resetFilter()
     {
-        return view('livewire.portfolio.portfolio-work')->layout('layouts.main');
+        $this->selectedCategory= null;
+        $this->resetPage();
+    }
+
+    public function render()
+    { 
+        return view('livewire.portfolio.portfolio-work', [
+            'data' => Work::Where('category', 'like', '%'.$this->selectedCategory.'%')
+            ->paginate($this->perPage),        
+            ])->layout('layouts.main');
     }
 }

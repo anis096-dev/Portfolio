@@ -53,37 +53,52 @@
         @endif
 
         <!-- Name -->
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
             <x-label for="name" value="{{ __('Name') }}" />
-            <x-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" required autocomplete="name" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-user"></i>
+            </span>
+            <x-input id="name" type="text" class="mt-1 relative block w-full pl-10" wire:model.defer="state.name" required autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Date of Birth -->
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
             <x-label for="date_of_birth" value="{{ __('Date of Birth') }}" />
-            <x-input id="date_of_birth" type="text" class="mt-1 block w-full" wire:model.defer="state.date_of_birth" required autocomplete="date_of_birth" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-baby"></i>
+            </span>
+            <x-input id="date_of_birth" type="date" class="mt-1 relative block w-full pl-10" wire:model.defer="state.date_of_birth" required autocomplete="date_of_birth" />
             <x-input-error for="date_of_birth" class="mt-2" />
         </div>
 
         <!-- Location -->
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
             <x-label for="location" value="{{ __('Location') }}" />
-            <x-input id="location" type="text" class="mt-1 block w-full" wire:model.defer="state.location" required autocomplete="location" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-location-crosshairs"></i>
+            </span>
+            <x-input id="location" type="text" class="mt-1 relative block w-full pl-10" wire:model.defer="state.location" required autocomplete="location" />
             <x-input-error for="location" class="mt-2" />
         </div>
 
         <!-- Phone -->
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
             <x-label for="phone" value="{{ __('Phone') }}" />
-            <x-input id="phone" type="text" class="mt-1 block w-full" wire:model.defer="state.phone" required autocomplete="phone" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            <x-input id="phone" type="text" class="mt-1 relative block w-full pl-10" wire:model.defer="state.phone" required autocomplete="phone" />
             <x-input-error for="phone" class="mt-2" />
         </div>
 
          <!-- Occupation -->
-         <div class="col-span-6 sm:col-span-4">
+         <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
             <x-label for="occupation" value="{{ __('Occupation') }}" />
-            <x-input id="occupation" type="text" class="mt-1 block w-full" wire:model.defer="state.occupation" required autocomplete="occupation" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-address-card"></i>
+            </span>
+            <x-input id="occupation" type="text" class="mt-1 relative block w-full pl-10" wire:model.defer="state.occupation" required autocomplete="occupation" />
             <x-input-error for="occupation" class="mt-2" />
         </div>
 
@@ -95,9 +110,12 @@
         </div>
 
         <!-- Email -->
-        <div class="col-span-6 sm:col-span-4">
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
             <x-label for="email" value="{{ __('Email') }}" />
-            <x-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" required autocomplete="username" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            <x-input id="email" type="email" class="mt-1 relative block w-full pl-10" wire:model.defer="state.email" required autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::emailVerification()) && ! $this->user->hasVerifiedEmail())
@@ -115,6 +133,62 @@
                     </p>
                 @endif
             @endif
+        </div>
+        
+        <div class="col-span-6 sm:col-span-4">
+            <span class="font-semibold text-lg">
+                {{ __('Update your Links\'s information and CV drive link.') }}
+            </span>
+        </div>
+
+         <!-- Medium -->
+         <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
+            <x-label for="medium" value="{{ __('Medium') }}" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-brands fa-medium"></i>
+            </span>
+            <x-input id="medium" type="url" class="mt-1 relative block w-full pl-10" wire:model.defer="state.medium" autocomplete="medium" />
+            <x-input-error for="medium" class="mt-2" />
+        </div>
+
+        <!-- Twitter -->
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
+            <x-label for="twitter" value="{{ __('Twitter') }}" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-brands fa-twitter"></i>
+            </span>
+            <x-input id="twitter" type="url" class="mt-1 relative block w-full pl-10" wire:model.defer="state.twitter" autocomplete="twitter" />
+            <x-input-error for="twitter" class="mt-2" />
+        </div>
+
+        <!-- Dribble -->
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
+            <x-label for="dribble" value="{{ __('Dribble') }}" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-basketball"></i>
+            </span>
+            <x-input id="dribble" type="url" class="mt-1 relative block w-full pl-10" wire:model.defer="state.dribble" autocomplete="dribble" />
+            <x-input-error for="dribble" class="mt-2" />
+        </div>
+
+        <!-- Linkedin -->
+        <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
+            <x-label for="linkedin" value="{{ __('Linkedin') }}" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-brands fa-linkedin"></i>
+            </span>
+            <x-input id="linkedin" type="url" class="mt-1 relative block w-full pl-10" wire:model.defer="state.linkedin" autocomplete="linkedin" />
+            <x-input-error for="linkedin" class="mt-2" />
+        </div>
+
+         <!-- CV drive -->
+         <div class="col-span-6 sm:col-span-4 relative flex w-full flex-wrap items-stretch mb-3">
+            <x-label for="CV_drive" value="{{ __('CV drive') }}" />
+            <span class="z-10 h-full leading-snug font-normal absolute text-centerbg-transparent rounded text-base items-center justify-center w-8 pl-3 py-9">
+                <i class="fa-solid fa-file"></i>
+            </span>
+            <x-input id="CV_drive" type="url" class="mt-1 relative block w-full pl-10" wire:model.defer="state.CV_drive" autocomplete="CV_drive" />
+            <x-input-error for="CV_drive" class="mt-2" />
         </div>
     </x-slot>
 

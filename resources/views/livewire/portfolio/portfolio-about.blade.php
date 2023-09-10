@@ -21,7 +21,7 @@
                         <!-- social media -->
                         <div class="flex justify-center space-x-3">
                             <!-- medium icon and link -->
-                            <a href="https://medium.com/" target="_blank" 
+                            <a href="{{$user->medium}}" target="_blank" 
                                 rel="noopener noreferrer">
                                 <span class="socialbtn text-[#1773EA]">
                                     <i class="fab fa-medium"></i>
@@ -29,19 +29,19 @@
                             </a>
                     
                             <!-- twitter icon and link -->
-                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$user->twitter}}" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#1C9CEA]">
                                     <i class="fa-brands fa-twitter"></i>
                                 </span>
                             </a>
                             <!-- dribbble icon and link -->
-                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$user->dribble}}" target="_blank" rel="noopener noreferrer">
                                 <span class="socialbtn text-[#e14a84]">
                                     <i class="fa-brands fa-dribbble"></i>
                                 </span>
                             </a>
                             <!-- linkedin icon and link -->
-                            <a href="https://www.linkedin.com/" target="_blank"
+                            <a href="{{$user->linkedin}}" target="_blank"
                                 rel="noopener noreferrer">
                                 <span class="socialbtn text-[#0072b1]">
                                     <i class="fa-brands fa-linkedin-in"></i>
@@ -96,8 +96,11 @@
                         <!-- dowanload button -->
                         <button class="dowanload-btn">
                             <i class="fa-solid fa-cloud-arrow-down w-5 h-5 mr-2"></i>                               
-                            Download
-                            CV
+                            <a href="{{$user->CV_drive}}" target="_blank"
+                                rel="noopener noreferrer">
+                                Download
+                                CV
+                            </a>
                         </button>
                     </div>
                 </div>

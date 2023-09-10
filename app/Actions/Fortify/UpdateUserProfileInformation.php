@@ -40,6 +40,11 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'phone' => $input['phone'],
                 'bio' => $input['bio'],
                 'occupation' => $input['occupation'],
+                'medium' => $input['medium'],
+                'twitter' => $input['twitter'],
+                'dribble' => $input['dribble'],
+                'linkedin' => $input['linkedin'],
+                'CV_drive' => $input['CV_drive'],
             ])->save();
         }
     }

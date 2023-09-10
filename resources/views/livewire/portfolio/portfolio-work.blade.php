@@ -2,14 +2,23 @@
     <div class="container px-4 sm:px-5 md:px-10 lg:px-[60px]">
         <div class="pb-12">
             <h2 class="after-effect after:left-36 ml mt-12 lg:mt-8">Works</h2>
-            <ul class="mt-[40px] flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
-                @foreach ($knowledges as $item)
-                <li class="fillter-btn text-sm mr-4 md:mx-2">{{$item->name}}</li>
-                @endforeach
-            </ul>
+            <div class="mt-[40px] flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
+                <select wire:model="selectedCategory" class="border border-gray-300 text-gray-600 h-14 mr-1 rounded bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                    <option value="">{{__('--Category--')}}</option>
+                    @forelse($knowledges as $item)
+                    <option>{{$item->name}}</option>    
+                    @empty
+                    <option>{{__('empty..')}}</option>
+                    @endforelse
+                </select>
+                <button wire:click="resetFilter" class="border border-gray-300 text-center h-14 p-2 mr-1 border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none appearance-none">
+                    {{__('reset All')}}
+                </button>
+            </div>
+            
             <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
                 <!-- work items start -->
-                @forelse ($user->works as $work)
+                @forelse ($data as $work)
                 <div
                     class="p-5 rounded-lg mb-2 h-full bg-[#fcf4ff] dark:bg-transparent dark:border-[#212425] dark:border-2">
                     <div class="overflow-hidden rounded-lg">
@@ -50,6 +59,9 @@
                 </div> 
                 @endforelse
                 <!-- work items end -->
+            </div>
+            <div class="mt-5">
+                {{ $data->links() }}
             </div>
 
             <!-- modal  for item start -->

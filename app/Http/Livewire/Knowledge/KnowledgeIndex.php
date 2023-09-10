@@ -22,7 +22,6 @@ class KnowledgeIndex extends Component
 
     public function add()
     {
-        // $this->knowledges->push(new Knowledge());
         $this->knowledges->push(Knowledge::make());
     }
 

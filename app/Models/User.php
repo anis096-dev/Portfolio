@@ -38,6 +38,11 @@ class User extends Authenticatable
         'phone',
         'bio',
         'occupation',
+        'medium',
+        'twitter',
+        'dribble',
+        'linkedin',
+        'CV_drive',
         'password',
     ];
 
