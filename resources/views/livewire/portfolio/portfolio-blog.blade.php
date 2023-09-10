@@ -23,22 +23,16 @@
                     </h3>
                 </div>   
                 @empty
-                <div class="p-5 rounded-lg mb-2 h-full bg-[#eefbff] dark:bg-transparent dark:border-[#212425] dark:border-2">
+                <div class="animate-pulse p-5 rounded-lg mb-2 h-full bg-[#eefbff] dark:bg-transparent dark:border-[#212425] dark:border-2">
                     <div class="overflow-hidden rounded-lg">
-                        <a>
-                            <img class="rounded-lg w-full h-48 cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
-                                src="assets/images/blog_images/small/1.jpg" alt="blog image" />
-                        </a>
-                    </div>
-                    <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
-                        <span>10 April</span>
-                        <span class="dot-icon">Inspiration</span>
-                    </div>
-                    <h3
-                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
-                        <a> Everything You Need to Know About Web
-                            Accessibility. </a>
-                    </h3>
+                        <div class="rounded-lg w-full h-48 cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"></div>                    </div>
+                        <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+                            <span class="dot-icon">------</span>
+                        </div>
+                        <h3 class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                            No blog found...
+                        </h3>
+                        <span class="font-bold text-orange-400">Coming soon!!</span>
                 </div> 
                 @endforelse
                 <!-- blog items end -->

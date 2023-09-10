@@ -11,7 +11,7 @@
                     <option>{{__('empty..')}}</option>
                     @endforelse
                 </select>
-                <button wire:click="resetFilter" class="border border-gray-300 text-center h-14 p-2 mr-1 border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none appearance-none">
+                <button wire:click="resetFilter" class="border border-gray-300 text-center h-14 p-2 mr-1 border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 focus:outline-none appearance-none">
                     {{__('reset All')}}
                 </button>
             </div>
@@ -41,21 +41,17 @@
                     </h3>
                 </div>   
                 @empty
-                <div class="p-5 rounded-lg mb-2 h-full bg-[#eefbff] dark:bg-transparent dark:border-[#212425] dark:border-2">
+                <div class="animate-pulse p-5 rounded-lg mb-2 h-full bg-[#eefbff] dark:bg-transparent dark:border-[#212425] dark:border-2">
                     <div class="overflow-hidden rounded-lg">
-                        <a>
-                            <img class="rounded-lg w-full h-48 cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
-                                src="assets/images/work_images/small/1.jpg" alt="work image" />
-                        </a>
+                        <div class="rounded-lg w-full h-48 cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"></div>                    
                     </div>
                     <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
-                        <span class="dot-icon">Inspiration</span>
+                        <span class="dot-icon">------</span>
                     </div>
-                    <h3
-                        class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
-                        <a> Everything You Need to Know About Web
-                            Accessibility. </a>
+                    <h3 class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]">
+                        No work found...
                     </h3>
+                    <span class="font-bold text-orange-400">Coming soon!!</span>
                 </div> 
                 @endforelse
                 <!-- work items end -->

@@ -18,11 +18,9 @@
                             <p class="dark:text-[#b7b7b7]"> {{$education->institute}}, {{$education->adress}} </p>
                         </div>
                         @empty
-                        <div class="bg-[#fff1fb] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2019 -
-                                Present</span>
-                            <h3 class="text-xl dark:text-white"> Sr. Software Tester </h3>
-                            <p class="dark:text-[#b7b7b7]">Google Inc.</p>
+                        <div class="animate-pulse bg-[#f2f4ff] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
+                            <h2 class=" dark:text-white text-gray-900 title-font font-semibold">{{__('No Results Found')}}</h2>
+                            <p class="text-gray-500">.......</p>
                         </div>
                         @endforelse
                     
@@ -42,10 +40,9 @@
                             <p class="dark:text-[#b7b7b7]"> {{$experience->company}}, {{$experience->adress}} </p>
                         </div>
                         @empty
-                        <div class="bg-[#f2f4ff] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2015-2017</span>
-                            <h3 class="text-xl dark:text-white"> Cr. Web Developer </h3>
-                            <p class="dark:text-[#b7b7b7]">ib-themes ltd.</p>
+                        <div class="animate-pulse bg-[#f2f4ff] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
+                            <h2 class="dark:text-white text-gray-900 title-font font-semibold">{{__('No Results Found')}}</h2>
+                            <p class="text-gray-500">.......</p>
                         </div>
                         @endforelse
                     </div>
@@ -72,9 +69,9 @@
                     </div>
                     @empty
                     <div class="mb-5">
-                        <div class="flex justify-between mb-1">
-                            <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">skill
-                                name</span>
+                        <div class="animate-pulse flex justify-between mb-1">
+                            <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">No skill
+                                found</span>
                             <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6">--%</span>
                         </div>
                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
@@ -90,7 +87,7 @@
                         @forelse ($user->Knowledges as $knowledge)
                         <button class="resume-btn">{{$knowledge->name}}</button>
                         @empty
-                        <button class="resume-btn">knowledge_name..</button>
+                        <button class="animate-pulse resume-btn">Add knowledge..</button>
                         @endforelse  
                     </div>
                 </div>

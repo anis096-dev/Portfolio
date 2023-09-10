@@ -24,7 +24,7 @@ use App\Http\Livewire\Work\WorkIndex;
 |
 */
 
-Route::get('/', function () { return view('welcome');})->name('portfolio');
+// Route::get('/', function () { return view('welcome');})->name('portfolio');
 
 Route::get('/about',PortfolioAbout::class)->name('about');
 Route::get('/resume',PortfolioResume::class)->name('resume');

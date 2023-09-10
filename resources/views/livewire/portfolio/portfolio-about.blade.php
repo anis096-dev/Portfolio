@@ -14,9 +14,9 @@
                     <div class="pt-[100px] pb-8">
                         <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> {{$user->name}}
                         </h2>
-                        <h3
-                            class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
-                            {{$user->ocupation}} </h3>
+                        <h3 class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
+                            {{$user->ocupation}} 
+                        </h3>
 
                         <!-- social media -->
                         <div class="flex justify-center space-x-3">
@@ -107,6 +107,7 @@
             </div>
             <!-- personal info for mobile devices end -->
 
+            <!-- About -->
             <div class="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center">
                 <div class="col-span-12 space-y-2.5">
                     <div class="lg:mr-16">
@@ -115,6 +116,7 @@
                     <div></div>
                 </div>
             </div>
+            <!-- End About -->
 
         </div>
 
@@ -132,14 +134,9 @@
                     </div>
                 </div>
                 @empty
-                <div class="about-box bg-[#fefaf0] dark:bg-transparent">
-                    <img class="w-10 h-10 object-contain block" src="images/icons/icon1.svg"
-                        alt="icon" />
-                    <div class="space-y-2">
-                        <h3 class="dark:text-white text-[22px] font-semibold"> Skill Name </h3>
-                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit
-                            amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
-                    </div>
+                <div class="animate-pulse about-box bg-[#fefaf0] dark:bg-transparent">
+                    <div class="w-10 h-10 object-contain text-md rounded-full bg-blue-100"></div>
+                    <h3 class="dark:text-white mt-1 text-md font-semibold">No skill found... </h3>
                 </div>
                 @endforelse
             </div>
@@ -165,9 +162,8 @@
                         </div>  
                     </div>
                     @empty
-                    <div>
-                        <img class="overflow-hidden brand-img" src="images/slider/brand1.png"
-                            alt="brand icon" />
+                    <div class="animate-pulse about-box bg-[#fefaf0] dark:bg-transparent">
+                        <h3 class="dark:text-white text-md font-semibold">No client found... </h3>
                     </div>
                     @endforelse
                 </div>
