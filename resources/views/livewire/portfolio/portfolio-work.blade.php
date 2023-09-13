@@ -11,7 +11,7 @@
                     <option>{{__('empty..')}}</option>
                     @endforelse
                 </select>
-                <button wire:click="resetFilter" class="border border-gray-300 text-center h-14 p-2 mr-1 border-transparent text-base font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 focus:outline-none appearance-none">
+                <button wire:click="resetFilter" class="border border-gray-300 text-center h-14 p-2 mr-1 border-transparent text-base font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none appearance-none">
                     {{__('reset All')}}
                 </button>
             </div>

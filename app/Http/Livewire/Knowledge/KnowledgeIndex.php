@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire\Knowledge;
 
-use App\Models\Knowledge;
+use Exception;
 use Livewire\Component;
+use App\Models\Knowledge;
 
 class KnowledgeIndex extends Component
 {
@@ -36,10 +37,19 @@ class KnowledgeIndex extends Component
 
     public function delete($index)
     {
+        try{
         $knowledge = $this->knowledges[$index];
         $this->knowledges->forget($index); 
         
         $knowledge->delete();
+    }
+    catch(Exception $e){
+        // Set Flash Message
+        $this->dispatchBrowserEvent('alert',[
+            'type'=>'error',
+            'message'=>"Please fill in the necessary fields!"
+        ]);
+    }
     }
 
     public function render()

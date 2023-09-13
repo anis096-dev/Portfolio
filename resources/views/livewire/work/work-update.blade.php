@@ -29,7 +29,7 @@
 
                     <div class="col-span-6">
                         <x-label for="link" value="{{ __('link') }}"/>
-                        <x-input wire:model.defer="link" id="link" type="text" class="mt-1 block w-full" />
+                        <x-input wire:model.defer="link" id="link" type="url" class="mt-1 block w-full" />
                         <x-input-error for="link" class="mt-2"/>
                     </div>
 

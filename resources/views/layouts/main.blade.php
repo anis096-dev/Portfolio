@@ -19,7 +19,7 @@
         <!--=== main css ===-->
         <link rel="stylesheet" href="{{asset('assets/css/tailwind.css')}}" />
         <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}" />
-      
+   
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -52,7 +52,6 @@
                 <div class="w-full flex justify-between px-4">
                     <!-- website Logo -->
                     <a href="{{route('about')}}">
-                        {{-- <img class="h-[26px] lg:h-[32px]" src="images/logo/logo.png" alt="logo" /> --}}
                         <span class="dark:text-white px-2 font-bold">
                             Hello<br />
                             World
